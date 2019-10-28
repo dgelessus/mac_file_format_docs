@@ -12,7 +12,75 @@ This work is licensed under a [Creative Commons Attribution 4.0 International Li
 
 **Note:** The license only applies to the contents of this repository. All linked external websites and documents are subject to their own copyright notices and license terms.
 
-## Inside Macintosh
+## General information
+
+These resources provide general documentation about the Mac, its internals, and development for the platform. They don't focus on any specific topic.
+
+### Non-Mac-specific
+
+These resources are not Mac-specific, but contain some Mac-related information.
+
+* [Wikipedia](https://en.wikipedia.org/) has articles about many Mac-related topics. The articles themselves usually don't go into deep technical detail, but the references and external links are often worth looking at for more information.
+* <a id="jstffp"></a>The [Just Solve the File Format Problem](http://fileformats.archiveteam.org/) wiki, run by [Archive Team](https://archiveteam.org/), provides information about various file formats. The name might sound like clickbait, but this is a decent site with useful information. As with Wikipedia, the articles often don't go into much detail, but the links are useful for further research.
+* The [Kaitai Struct format gallery](https://formats.kaitai.io/) is a collection of [Kaitai Struct](https://kaitai.io/) specifications for common file formats. The source code for all specs can be found in the [kaitai-io/kaitai_struct_formats](https://github.com/kaitai-io/kaitai_struct_formats) GitHub repo. These specs can be compiled to many popular programming languages to allow parsing files in the specified format.
+
+* The [Internet Archive (archive.org)](https://archive.org/) has some Mac-related literature, documents and software. Aside from the general search function, the following collections are relevant in particular:
+
+	* [Folkscanomy: Macintosh Books](https://archive.org/details/macbooks)
+	* [The Software Library: Apple Computer](https://archive.org/details/softwarelibrary_apple) (this collection focuses mainly on the non-Macintosh Apple computers)
+	* [Software Library: Macintosh](https://archive.org/details/softwarelibrary_mac)
+
+* [bitsavers.org](http://bitsavers.org/) is an archive of documents (and some software) related to technology and computing. The site has no built-in search function, but external search engines can be used. It is also mirrored to archive.org (at least partially), so it can be searched using their search function. The site is organized by topic, so a text search often isn't necessary. The following directories are relevant in particular:
+
+	* [/bits/Apple/](http://bitsavers.org/bits/Apple/)
+	* [/components/ibm/powerpc/](http://bitsavers.org/components/ibm/powerpc/)
+	* [/components/motorola/](http://bitsavers.org/components/motorola/)
+	* [/pdf/apple/](http://bitsavers.org/pdf/apple/)
+
+### Mac-specific
+
+These resources are specifically about Apple and the Mac.
+
+* <a id="apple-developer-download"></a>[Apple's developer download section](https://developer.apple.com/download/more/) provides downloads for Xcode and other Mac OS X/macOS developer tools. The earliest downloads are from the Mac OS X Panther (10.3) era. Accessing this page requires an Apple ID with a developer program membership (the free membership is sufficient).
+
+* <a id="apple-documentation-archive"></a>[Apple's developer documentation](https://developer.apple.com/documentation/) is the official source of developer information for Apple's platforms. The main section of the website only covers current system versions, but older information can be found in the [documentation archive](https://developer.apple.com/library/archive/navigation/). Unfortunately, Apple sometimes arbitrarily removes older documents from the archive. It's not clear how Apple decides what to remove - it's not purely based on age, as the oldest available documents (as of October 2019) are tech notes from 1985. This means that some older documentation can only be found in old copies of the website, such as the following:
+
+	* The [Wayback Machine](https://web.archive.org/) has saved almost all parts of the site at some point. The URLs of the documentation and archive have changed in the past - if the Wayback Machine doesn't have a URL saved, it may help to search for the same URL with a different prefix. The following prefixes were used in the past (ordered from newest to oldest):
+	
+		* [https://developer.apple.com/library/archive/](https://web.archive.org/web/*/https://developer.apple.com/library/archive/) (legacy)
+		* [https://developer.apple.com/library/mac/](https://web.archive.org/web/*/https://developer.apple.com/library/mac/) (non-legacy), [https://developer.apple.com/legacy/library/](https://web.archive.org/web/*/https://developer.apple.com/legacy/library/) (legacy)
+		* [https://developer.apple.com/mac/library/](https://web.archive.org/web/*/https://developer.apple.com/mac/library/) (non-legacy), [https://developer.apple.com/legacy/mac/library/](https://web.archive.org/web/*/https://developer.apple.com/legacy/mac/library/) (legacy)
+	
+	* A copy dated August 2010 can be found [on the Internet Archive](https://archive.org/details/ftpsites_developer.apple.com) and [on macintosharchive.org's mirror of Max1zzz's server](http://mirror.macintosharchive.org/max1zzz.co.uk/++Uploads%20%5bUL%5d/Barracuda/FTP%20mirrors/ftpsites_developer.apple.com/).
+	* oldschooldaw.com has [a mirror](http://adcmirror.oldschooldaw.com/) from October 2006. This mirror has itself [been mirrored](http://mirror.macintosharchive.org/developer.apple.com/) by macintosharchive.org.
+
+* Apple's Technical Notes provided developer documentation for classic Mac hardware and software. Some of them can still be found in Apple's documentation archive, but many of them have been removed. Mirrors of the technical notes can be found online:
+
+	* fenestrated.net has [a mirror of the technical notes](https://www.fenestrated.net/mirrors/Apple%20Technotes%20(As%20of%202002)/) from 2002.
+	* A collection of developer notes can be found [on the Internet Archive](https://archive.org/details/nonmm-apple-dev-notes) and [on macintosharchive.org's mirror of Max1zzz's server](http://mirror.macintosharchive.org/max1zzz.co.uk/++Uploads%20%5bUL%5d/Barracuda/nonmm-apple-dev-notes/).
+
+* <a id="apple-support-area"></a>The [Apple Support Area on download.info.apple.com](http://download.info.apple.com/Apple_Support_Area/), Apple's download section for pre-Mac OS X systems (and some early Mac OS X-related files). The files under this directory tree can still be downloaded from Apple, although the server no longer provides directory listings. The contents of this server are also widely mirrored:
+
+	* The [Wayback Machine](https://web.archive.org/web/*/http://download.info.apple.com/Apple_Support_Area/) contains a likely complete copy of the directory listings and files.
+	* The Internet Archive has [a copy](https://archive.org/details/download.info.apple.com.2012.11), and [another one](https://archive.org/details/ftpsites_download.info.apple.com).
+	* Max1zzz's server has [a copy of the Apple_Software_Updates subdirectory](http://asa.max1zzz.co.uk/).
+	* macintosharchive.org has [a copy](http://mirror.macintosharchive.org/download.info.apple.com/).
+	* fenestrated.net has [a copy](https://www.fenestrated.net/mirrors/Apple_Support_Area/), which can also be found [in macintosharchive.org's mirror of Max1zzz's server](http://mirror.macintosharchive.org/max1zzz.co.uk/++Uploads%20%5bUL%5d/Barracuda/FTP%20mirrors/www.fenestrated.net/mirrors/Apple_Support_Area/).
+
+* <a id="apple-ftp"></a>ftp.apple.com, Apple's FTP server. Like many old FTP servers, it is no longer online. Some of its content is available from download.info.apple.com (see above). There are also some mirrors of the FTP server:
+
+	* A mirror claiming to be from November 2018 (date likely incorrect) can be found [on the Internet Archive](https://archive.org/details/Apple_Computer_FTP_Mirror_2018-11) and [on macintosharchive.org's mirror of Max1zzz's server](http://mirror.macintosharchive.org/max1zzz.co.uk/++Uploads%20%5bUL%5d/Barracuda/FTP%20mirrors/Apple%20FTP%20mirror/).
+	* staticky.com has a [partial mirror of the developer subdirectory](http://staticky.com/mirrors/ftp.apple.com/). This mirror is incomplete - apparently the server was mirrored with a low directory depth limit, so the contents of deeply nested directories were not mirrored.
+
+* [Macintosh Garden](https://macintoshgarden.org/) and [Macintosh Repository](https://www.macintoshrepository.org/) are archives of classic Mac (and early Mac OS X) freeware, abandonware and related documentation. They are useful places to find system files and developer tools.
+
+	* The Internet Archive has [a mirror of Macintosh Garden's files](https://archive.org/details/Macintosh_Garden_Collection) from 2018.
+
+* macintosharchive.org hosts [a collection of mirrors](http://mirror.macintosharchive.org/) of Mac-related websites.
+* [Max1zzz's server](http://max1zzz.co.uk) was a collection of Mac-related files and mirrors, but as of April 2019 it is no longer online. [A complete mirror](http://mirror.macintosharchive.org/max1zzz.co.uk/) can be found on macintosharchive.org.
+* [VintageApple.org](https://vintageapple.org/) is a collection of early Apple and Mac documents and a couple of mirrors.
+
+#### Inside Macintosh
 
 The Inside Macintosh book series are Apple's official reference material for the classic Macintosh platform. Over time, they have gone through many revisions and updates, and their structure has been changed multiple times.
 
@@ -45,7 +113,7 @@ The following is a (likely incomplete) list of the major revisions of Inside Mac
 	
 		* The Communications Toolbox and QuickDraw GX Programmers' Overview volumes appear to be missing.
 	
-	* Many volumes are still available in Apple's legacy developer documentation archive, in HTML and rendered (not scanned) PDF formats:
+	* Many volumes are still available in [Apple's legacy developer documentation archive](#apple-documentation-archive), in HTML and rendered (not scanned) PDF formats:
 	
 		* Two volumes appear on the website under Inside Macintosh, even though other sources don't consider them part of the Inside Macintosh series:
 		
@@ -71,9 +139,9 @@ The following is a (likely incomplete) list of the major revisions of Inside Mac
 ## Resource forks
 
 * The chapter "Resource Manager" in the [Inside Macintosh](#inside-macintosh) series. This chapter is found in Volume I of the original Inside Macintosh revisions, and in the "More Macintosh Toolbox" volume of the restructured revisions.
-* [Wikipedia](https://en.wikipedia.org/wiki/Resource_fork), of course.
-* The [Resource Fork](http://fileformats.archiveteam.org/wiki/Resource_Fork) article on "Just Solve the File Format Problem" (despite the title, this is a decent site and not clickbait).
+* Wikipedia's [resource fork](https://en.wikipedia.org/wiki/Resource_fork) article.
+* The [Resource Fork](http://fileformats.archiveteam.org/wiki/Resource_Fork) article on the [JSTFFP](#jstffp) wiki.
 * The [KSFL](https://github.com/kreativekorp/ksfl) library (and [its wiki](https://github.com/kreativekorp/ksfl/wiki/Macintosh-Resource-File-Format)), written in Java, which supports reading and writing resource files.
 * Alysis Software Corporation's article on resource compression (found on [the company's website](http://www.alysis.us/arctechnology.htm) and in [MacTech Magazine's online archive](http://preserve.mactech.com/articles/mactech/Vol.09/09.01/ResCompression/index.html)) has some information on the structure of certain kinds of compressed resources.
-* Apple's macOS SDK, which is distributed with Xcode. The latest version of Xcode is available for free from the Mac App Store. Current and previous versions can be downloaded from [the Apple Developer download page](https://developer.apple.com/download/more/). Accessing these downloads requires an Apple ID with (at least) a free developer program membership.
-* Apple's MPW (Macintosh Programmer's Workshop) and related developer tools. These were previously available from Apple's FTP server at ftp://ftp.apple.com/, which is no longer functional. Because of this, these downloads are only available on mirror sites, such as http://staticky.com/mirrors/ftp.apple.com/.
+* Apple's macOS SDK, which is distributed with Xcode. The latest version of Xcode is available for free from the Mac App Store. Current and previous versions can be downloaded from [Apple's developer download section](#apple-developer-download).
+* Apple's MPW (Macintosh Programmer's Workshop) and related developer tools and their documentation. These were previously available from [Apple's FTP server](#apple-ftp).
