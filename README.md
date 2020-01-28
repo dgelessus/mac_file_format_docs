@@ -22,7 +22,7 @@ These resources are not Mac-specific, but contain some Mac-related information.
 
 * [Wikipedia](https://en.wikipedia.org/) has articles about many Mac-related topics. The articles themselves usually don't go into deep technical detail, but the references and external links are often worth looking at for more information.
 * <a id="jstffp"></a>The [Just Solve the File Format Problem](http://fileformats.archiveteam.org/) wiki, run by [Archive Team](https://archiveteam.org/), provides information about various file formats. The name might sound like clickbait, but this is a decent site with useful information. As with Wikipedia, the articles often don't go into much detail, but the links are useful for further research.
-* The [Kaitai Struct format gallery](https://formats.kaitai.io/) is a collection of [Kaitai Struct](https://kaitai.io/) specifications for common file formats. The source code for all specs can be found in the [kaitai-io/kaitai_struct_formats](https://github.com/kaitai-io/kaitai_struct_formats) GitHub repo. These specs can be compiled to many popular programming languages to allow parsing files in the specified format.
+* <a id="kaitai-struct"></a>The [Kaitai Struct format gallery](https://formats.kaitai.io/) is a collection of [Kaitai Struct](https://kaitai.io/) specifications for common file formats. The source code for all specs can be found in the [kaitai-io/kaitai_struct_formats](https://github.com/kaitai-io/kaitai_struct_formats) GitHub repo. These specs can be compiled to many popular programming languages to allow parsing files in the specified format.
 
 * The [Internet Archive (archive.org)](https://archive.org/) has some Mac-related literature, documents and software. Aside from the general search function, the following collections are relevant in particular:
 
@@ -145,3 +145,62 @@ The following is a (likely incomplete) list of the major revisions of Inside Mac
 * Alysis Software Corporation's article on resource compression (found on [the company's website](http://www.alysis.us/arctechnology.htm) and in [MacTech Magazine's online archive](http://preserve.mactech.com/articles/mactech/Vol.09/09.01/ResCompression/index.html)) has some information on the structure of certain kinds of compressed resources.
 * Apple's macOS SDK, which is distributed with Xcode. The latest version of Xcode is available for free from the Mac App Store. Current and previous versions can be downloaded from [Apple's developer download section](#apple-developer-download).
 * Apple's MPW (Macintosh Programmer's Workshop) and related developer tools and their documentation. These were previously available from [Apple's FTP server](#apple-ftp).
+
+## AFP (Apple Filing Protocol)
+
+* Wikipedia's [AFP article](https://en.wikipedia.org/wiki/Apple_Filing_Protocol).
+* The [AFP programming guide](https://developer.apple.com/library/archive/documentation/Networking/Conceptual/AFP/Introduction/Introduction.html) and [AFP reference](https://web.archive.org/web/20130906023421/https://developer.apple.com/library/mac/documentation/Networking/Reference/AFP_Reference/Reference/reference.html) from [Apple's developer documentation](#apple-documentation-archive).
+
+### Windows NT Services for Macintosh
+
+* A [microsoft.public.windowsnt.mac Usenet discussion](https://groups.google.com/d/topic/microsoft.public.windowsnt.mac/PTisz9EZWQg/discussion) about how AFP file information and resource forks are stored on Windows NTFS volumes. (TLDR: alternate data streams named AFP_AfpInfo and AFP_Resource.)
+
+## AppleSingle and AppleDouble
+
+* The articles on the [JSTFFP](#jstffp) wiki about [AppleSingle](http://fileformats.archiveteam.org/wiki/AppleSingle) and [AppleDouble](http://fileformats.archiveteam.org/wiki/AppleDouble).
+* The [Kaitai Struct](#kaitai-struct) spec `filesystem/apple_single_double`, as found [on formats.kaitai.io](https://formats.kaitai.io/apple_single_double/index.html) and [in the kaitai_struct_formats repo](https://github.com/kaitai-io/kaitai_struct_formats/blob/master/filesystem/apple_single_double.ksy).
+
+* Apple's Apple II File Type Notes for AppleSingle (E0 0001) and AppleDouble (E0 0002 and E0 0003), which document version 1 of the format, with a short note about version 2. These notes can be found in many places online:
+
+	* On nulib.com, in plain text format: [AppleSingle](https://nulib.com/library/FTN.e00001.htm), [AppleDouble](https://nulib.com/library/FTN.e000023.htm) (mirrored on ee.columbia.edu: [AppleDouble](https://www.ee.columbia.edu/~dpwe/resources/FTN.e000023.htm))
+	* On 1000bit.it, in formatted HTML format: [AppleSingle](https://www.1000bit.it/support/manuali/apple/technotes/ftyp/ftn.e0.0001.html), [AppleDouble](https://www.1000bit.it/support/manuali/apple/technotes/ftyp/ftn.e0.0002.3.html)
+	* On apple2online.com, in rendered PDF format: [AppleSingle](https://www.apple2online.com/web_documents/ft_e0.0001_applesingle.pdf), [AppleDouble](https://www.apple2online.com/web_documents/ft_e0.0002.3_appledouble.pdf)
+
+* Apple's A/UX Toolbox Macintosh ROM Interface documentation, section 6 "File Systems and File Formats", subsection "AppleSingle and AppleDouble format internals", which documents version 1 of the format.
+
+	* bitsavers.org has [a scanned and OCRed PDF of the entire document](http://bitsavers.org/pdf/apple/mac/a_ux/aux_2.0/030-0787-A_AUX_Toolbox_Macintosh_ROM_Interface_1990.pdf). In this version, the relevant pages are 6-15 through 6-20 (real page numbers 126 through 131).
+	* kaiser-edv.de had [a scanned PDF of the relevant pages](https://web.archive.org/web/20160325000219/http://kaiser-edv.de/documents/AppleSingle_AppleDouble_v1.pdf) (website gone, link via Wayback Machine) from a slightly different edition.
+
+* Apple's AppleSingle/AppleDouble Formats for Foreign Files Developer's Note, from 1990, which documents version 2 of the format. A rendered PDF version is available [from nulib.com](https://nulib.com/library/AppleSingle_AppleDouble.pdf) and [from kaiser-edv.de](https://web.archive.org/web/20180311140826/http://kaiser-edv.de/documents/AppleSingle_AppleDouble.pdf) (website gone, link via Wayback Machine).
+
+* [RFC 1740 -  MIME Encapsulation of Macintosh files - MacMIME](https://tools.ietf.org/html/rfc1740), from 1994, describes a later version of the format. (It appears to be equivalent to version 2 described in the previous developer's note.)
+
+* A number of GitHub projects work with AppleSingle/AppleDouble files in some way and allow reading the format in different languages. In no particular order:
+
+	* https://github.com/AppleCommander/applesingle
+	* https://github.com/fthain/applesingle
+	* https://github.com/robzed/AppleSingle_Decoder
+	* https://github.com/gitpan/Mac-AppleSingleDouble
+	* https://github.com/marcust/AppleSingleReader
+	* https://github.com/ksherlock/dot_clean
+	* https://github.com/rolftimmermans/node-xattr-file
+	* https://github.com/MacPaw/XADMaster/blob/master/XADAppleDouble.m
+	* https://github.com/MacPaw/XADMaster/blob/master/XADAppleSingleParser.m
+	* https://github.com/ParksProjets/Maconv
+
+## QTR (QuickTime RezWack)
+
+The QTR (QuickTime RezWack) format was used to add Mac-style resources to Windows files. It was used as part of QTML, the QuickTime Media Layer, which was effectively a partial port of the Macintosh Toolbox and Mac OS to Windows, to allow writing cross-platform QuickTime code that could be used with both Mac and Windows versions of QuickTime.
+
+* Two articles from MacTech's online archive: one [about QuickTime for Windows and QTML development in general](http://preserve.mactech.com/articles/mactech/Vol.17/17.01/2001ASpaceOdyssey/index.html), and another [specifically about using QTR-based resources](http://preserve.mactech.com/articles/mactech/Vol.18/18.10/HumanResources/index.html).
+* The QuickTime 7.3 SDK for Windows. It contains Windows versions of the DeRez, Rez, RezDet, and RezWack tools that use the QTR format, instead of normal resource forks like their Mac versions.
+
+	* It can be officially downladed from [Apple's developer download section](#apple-developer-download). The file you download there is:
+	
+		* a Zip archive called quicktimesdk.zip (SHA256 [31ffc087e03a68585c7b67c7986e80eeb6440ac7fdb410a381e9b9da9b561d6d](https://www.virustotal.com/gui/file/31ffc087e03a68585c7b67c7986e80eeb6440ac7fdb410a381e9b9da9b561d6d/detection)), containing...
+		* a self-extracting cabinet EXE called QuickTimeSDK.exe (SHA256 [fea9102899b6f6a1b20f1a1d1d656d28ffe32b99afb95c826548c0fef1d42bb1](https://www.virustotal.com/gui/file/fea9102899b6f6a1b20f1a1d1d656d28ffe32b99afb95c826548c0fef1d42bb1/details)), containing...
+		* an MSI installer called QuickTimeSDK.msi (SHA256 [40fb26259e60bd1711bd6845223392381b973a50d76ac231283bf603a2b4aff1](https://www.virustotal.com/gui/file/40fb26259e60bd1711bd6845223392381b973a50d76ac231283bf603a2b4aff1/detection)), containing the actual files.
+	
+	* The SDK can also be obtained elsewhere, in which case you might find it in any of the three formats listed above. If the file you downloaded matches any of the above hashes, you can be sure that it's the original unmodified SDK.
+	
+		* For example, the MSI version can be found in [a random GitHub repo](https://github.com/zhaozhongshu/quicktime-sdk-7.3-for-windows/blob/c174718dbea7f909c3666411c4952c9efd3372a9/QuickTimeSDK.msi).
