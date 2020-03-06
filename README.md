@@ -153,7 +153,7 @@ The following is a (likely incomplete) list of the major revisions of Inside Mac
 
 ### Windows NT Services for Macintosh
 
-* A [microsoft.public.windowsnt.mac Usenet discussion](https://groups.google.com/d/topic/microsoft.public.windowsnt.mac/PTisz9EZWQg/discussion) about how AFP file information and resource forks are stored on Windows NTFS volumes. (TLDR: alternate data streams named AFP_AfpInfo and AFP_Resource.)
+* A [microsoft.public.windowsnt.mac Usenet discussion](https://groups.google.com/d/topic/microsoft.public.windowsnt.mac/PTisz9EZWQg/discussion) (individual raw messages: [question](https://groups.google.com/forum/message/raw?msg=microsoft.public.windowsnt.mac/PTisz9EZWQg/nV__6uMIPawJ), [answer](https://groups.google.com/forum/message/raw?msg=microsoft.public.windowsnt.mac/PTisz9EZWQg/JaWO4vUM75oJ)) about how AFP file information and resource forks are stored on Windows NTFS volumes. (TLDR: alternate data streams named AFP_AfpInfo and AFP_Resource.)
 
 ## AppleSingle and AppleDouble
 
