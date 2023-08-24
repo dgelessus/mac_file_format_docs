@@ -136,6 +136,22 @@ The following is a (likely incomplete) list of the major revisions of Inside Mac
 		* [Text (HTML)](https://developer.apple.com/library/archive/documentation/mac/Text/Text-2.html) (July 1996), [Text (single PDF)](https://developer.apple.com/library/archive/documentation/mac/pdf/Text.pdf) (1993)
 		* The two AOCE volumes, Communications Toolbox, Human Interface Guidelines, Overview, seven QuickDraw GX volumes, two QuickTime volumes, and X-Ref are missing.
 
+## File type and creator codes (file signatures)
+
+* The chapter "The Finder Interface" in the [Inside Macintosh](#inside-macintosh) series explains the basic concepts and lists a few standard/system file type codes. This chapter is found in Volume III of the original Inside Macintosh revisions, and in the "Macintosh Toolbox Essentials" volume of the restructured revisions.
+* Apple previously provided a registration service for creator codes to prevent conflicting uses of the same creator codes. This included a lookup form for checking if a creator code is already in use, but there was no public list of all creator codes.
+	* An [early 2000s version of the service](https://web.archive.org/web/20031204220705/http://developer.apple.com/dev/cftype/) also had [a FAQ about creator code registration](https://web.archive.org/web/20031206002820/http://developer.apple.com/dev/cftype/faq.html).
+	* The last version of the service was found at https://developer.apple.com/datatype/ until 2009 or so (based on the Wayback Machine history). Afterwards, that URL redirected to [Apple's documentation for Uniform Type Identifiers (UTIs)](https://developer.apple.com/library/archive/documentation/FileManagement/Conceptual/understanding_utis/understand_utis_intro/understand_utis_intro.html), which are the modern replacement for type and creator codes.
+* The Type/Creator Database (TCDB/TCDBx) is exactly what it sounds like. Notably, it's a downloadable application, not an online service.
+	* It was previously a paid product, but [the current homepage at lacikam.co.il](https://lacikam.co.il/tcdb/) offers a [free download of the full data set](https://lacikam.co.il/tcdb/download/TCDBdata.zip).
+	* The [former homepage at homepage.mac.com/tcdb/](https://web.archive.org/web/20100106142542/http://homepage.mac.com/tcdb/) is no longer up, but can be found in the Wayback Machine.
+	* Various versions of the downloads are [mirrored on Macintosh Garden](https://macintoshgarden.org/apps/typecreator-database).
+* Indiana University has [a very short explanation](https://kb.iu.edu/d/aemh) of type/creator codes.
+* macdisk.com has an explanation page "[Signatures of Macintosh Files](https://www.macdisk.com/macsigen.php)", including a list of some common type and creator codes.
+* Zeus Productions has [a "tech note"](http://www.zeusprod.com/technote/filetype.html) explaining how to use type/creator codes in Macromedia Director (I think). It also explains some general concepts and lists common and Director-specific type/creator codes.
+* revolution.byu.edu had a help article "[Mac Creator Signature and File Types in Revolution/LiveCode](https://web.archive.org/web/20171118233752/revolution.byu.edu/helps/file-creatorcodes.php)", which also gives a short general explanation, a list of a few common type and creator codes, and some related links.
+* A [2005 post by Henning Ramm](https://mail.python.org/pipermail/pythonmac-sig/2005-February/013028.html) on the Pythonmac-SIG mailing list gives some mappings from type/creator codes to file extensions (and vice versa) and short descriptions.
+
 ## Resource forks
 
 * The chapter "Resource Manager" in the [Inside Macintosh](#inside-macintosh) series. This chapter is found in Volume I of the original Inside Macintosh revisions, and in the "More Macintosh Toolbox" volume of the restructured revisions.
@@ -145,6 +161,7 @@ The following is a (likely incomplete) list of the major revisions of Inside Mac
 * Alysis Software Corporation's article on resource compression (found on [the company's website](http://www.alysis.us/arctechnology.htm) and in [MacTech Magazine's online archive](http://preserve.mactech.com/articles/mactech/Vol.09/09.01/ResCompression/index.html)) has some information on the structure of certain kinds of compressed resources.
 * Apple's macOS SDK, which is distributed with Xcode. The latest version of Xcode is available for free from the Mac App Store. Current and previous versions can be downloaded from [Apple's developer download section](#apple-developer-download).
 * Apple's MPW (Macintosh Programmer's Workshop) and related developer tools and their documentation. These were previously available from [Apple's FTP server](#apple-ftp).
+* whitefiles.org has a "[Resources](https://whitefiles.org/mac/pgs/t02.htm)" page explaining the basics of ResEdit and common system resource types.
 
 ## AFP (Apple Filing Protocol)
 
@@ -204,3 +221,25 @@ The QTR (QuickTime RezWack) format was used to add Mac-style resources to Window
 	* The SDK can also be obtained elsewhere, in which case you might find it in any of the three formats listed above. If the file you downloaded matches any of the above hashes, you can be sure that it's the original unmodified SDK.
 	
 		* For example, the MSI version can be found in [a random GitHub repo](https://github.com/zhaozhongshu/quicktime-sdk-7.3-for-windows/blob/c174718dbea7f909c3666411c4952c9efd3372a9/QuickTimeSDK.msi).
+
+## Disk images
+
+* The Mac OS X/macOS hdiutil(1) man page. Although naturally it focuses on how to work with disk images and doesn't specify any data formats, it does document lots of random technical details. In particular:
+	* Under `hdiutil convert`is a list of basically all disk image formats and variants that Apple has ever supported.
+	* The "compatibility", "history", and "what's new" sections give a pretty complete history of these disk image formats/variants and which system versions support them (or don't).
+	* Some older info has been removed from the man page since macOS 11, which removed support for most Classic Mac OS disk image formats.
+* Wikipedia's [Apple Disk Image](https://en.wikipedia.org/wiki/Apple_Disk_Image) article has some general information, but also documents the basic data structures of UDIF disk images.
+* macdisk.com also documents [the basic data structures of UDIF disk images](https://www.macdisk.com/dmgen.php).
+* NewOSXBook.com has a page "[Demystifying the DMG File Format](https://newosxbook.com/DMG.html)", which documents the main UDIF metadata structures.
+
+## HFS+ file system compression
+
+* A Macworld Mac OS X Hints [page about HFS+ compression in Mac OS X 10.6](https://web.archive.org/web/20220407045715/http://hints.macworld.com/article.php?story=20090902223042255). The comments discuss additional tools for examining de-/compressing files compressed with HFS+ compression.
+	* One such tool, afsctool, has been developed by brkirch, the author of the above page. [brkirch's afsctool homepage](https://brkirch.wordpress.com/afsctool/) still exists (as of 2023-08), but the Google Drive download link isn't publicly accessible anymore. However, a few updated/extended versions of the afsctool source code can be found on GitHub:
+		* https://github.com/jrk/afsctool - archived since 2018-01-21
+		* https://github.com/RJVB/afsctool - still updated as of 2023 and supports newer macOS versions and compression algorithms like LZVN and LZFSE
+
+## Apple Data Compression (ADC)
+
+* macdisk.com documents [the ADC compression algorithm](https://www.macdisk.com/dmgen.php).
+* [node-apple-data-compression](https://github.com/jhermsmeier/node-apple-data-compression) implements ADC decompression as a Node.js library.
