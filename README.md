@@ -79,6 +79,7 @@ These resources are specifically about Apple and the Mac.
 * macintosharchive.org hosts [a collection of mirrors](http://mirror.macintosharchive.org/) of Mac-related websites.
 * [Max1zzz's server](http://max1zzz.co.uk) was a collection of Mac-related files and mirrors, but as of April 2019 it is no longer online. [A complete mirror](http://mirror.macintosharchive.org/max1zzz.co.uk/) can be found on macintosharchive.org.
 * [VintageApple.org](https://vintageapple.org/) is a collection of early Apple and Mac documents and a couple of mirrors.
+* https://www.mothersruin.com/software/Archaeology/reverse/
 
 #### Inside Macintosh
 
@@ -222,6 +223,11 @@ The QTR (QuickTime RezWack) format was used to add Mac-style resources to Window
 	
 		* For example, the MSI version can be found in [a random GitHub repo](https://github.com/zhaozhongshu/quicktime-sdk-7.3-for-windows/blob/c174718dbea7f909c3666411c4952c9efd3372a9/QuickTimeSDK.msi).
 
+## Classic Mac OS installer tomes
+
+* https://github.com/kainjow/TomeViewerX
+* https://github.com/MacPaw/XADMaster/issues/71
+
 ## Disk images
 
 * The Mac OS X/macOS hdiutil(1) man page. Although naturally it focuses on how to work with disk images and doesn't specify any data formats, it does document lots of random technical details. In particular:
@@ -231,6 +237,7 @@ The QTR (QuickTime RezWack) format was used to add Mac-style resources to Window
 * Wikipedia's [Apple Disk Image](https://en.wikipedia.org/wiki/Apple_Disk_Image) article has some general information, but also documents the basic data structures of UDIF disk images.
 * macdisk.com also documents [the basic data structures of UDIF disk images](https://www.macdisk.com/dmgen.php).
 * NewOSXBook.com has a page "[Demystifying the DMG File Format](https://newosxbook.com/DMG.html)", which documents the main UDIF metadata structures.
+* https://www.mothersruin.com/software/Archaeology/reverse/udif.html
 
 ## HFS+ file system compression
 
@@ -243,3 +250,17 @@ The QTR (QuickTime RezWack) format was used to add Mac-style resources to Window
 
 * macdisk.com documents [the ADC compression algorithm](https://www.macdisk.com/dmgen.php).
 * [node-apple-data-compression](https://github.com/jhermsmeier/node-apple-data-compression) implements ADC decompression as a Node.js library.
+
+## Apple Archives (.aar, .aea, .yaa)
+
+* https://developer.apple.com/documentation/applearchive?language=objc
+* https://developer.apple.com/forums/thread/133985
+* https://wwws.nightwatchcybersecurity.com/2020/06/14/yaa-an-obscure-macos-compressed-file-format/
+* https://eclecticlight.co/2022/05/10/inside-apple-archive-more-than-a-compression-format/
+* https://eclecticlight.co/2020/11/24/compress-and-decompress-files-using-applearchive/
+* https://github.com/aonez/Keka/issues/829
+
+## UIKit NIB archives (.nib files with NIBArchive signature)
+
+* https://www.mothersruin.com/software/Archaeology/reverse/uinib.html
+* https://github.com/JustHexData/nibarchive
