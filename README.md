@@ -231,7 +231,7 @@ The QTR (QuickTime RezWack) format was used to add Mac-style resources to Window
 ## Disk images
 
 * The Mac OS X/macOS hdiutil(1) man page. Although naturally it focuses on how to work with disk images and doesn't specify any data formats, it does document lots of random technical details. In particular:
-	* Under `hdiutil convert`is a list of basically all disk image formats and variants that Apple has ever supported.
+	* Under `hdiutil convert` is a list of basically all disk image formats and variants that Apple has ever supported.
 	* The "compatibility", "history", and "what's new" sections give a pretty complete history of these disk image formats/variants and which system versions support them (or don't).
 	* Some older info has been removed from the man page since macOS 11, which removed support for most Classic Mac OS disk image formats.
 * Wikipedia's [Apple Disk Image](https://en.wikipedia.org/wiki/Apple_Disk_Image) article has some general information, but also documents the basic data structures of UDIF disk images.
