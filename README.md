@@ -277,4 +277,6 @@ Another proprietary format, built on top of the Apple Archive format, which adds
 ## UIKit NIB archives (.nib files with NIBArchive signature)
 
 * Mothers Ruin Software [documents the NIB archive data format](https://www.mothersruin.com/software/Archaeology/reverse/uinib.html).
+* The open-source, MIT-licensed [nibsqueeze](https://github.com/matsmattsson/nibsqueeze) tool includes [documentation of the data format](https://github.com/matsmattsson/nibsqueeze/blob/HEAD/NibArchive.md) as it was originally introduced in iOS 6.
 * There is an open-source, GPLv3-licensed [NIBArchive-Parser](https://github.com/MatrixEditor/nibarchive) library/tool written in Python. (Previous URL: https://github.com/JustHexData/nibarchive)
+* There is an open-source, Apache-/MIT-licensed [NIB Archive Decoder/Encoder](https://github.com/michaelwright235/nibarchive) library written in Rust.
