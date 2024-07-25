@@ -79,7 +79,9 @@ These resources are specifically about Apple and the Mac.
 * macintosharchive.org hosts [a collection of mirrors](http://mirror.macintosharchive.org/) of Mac-related websites.
 * [Max1zzz's server](http://max1zzz.co.uk) was a collection of Mac-related files and mirrors, but as of April 2019 it is no longer online. [A complete mirror](http://mirror.macintosharchive.org/max1zzz.co.uk/) can be found on macintosharchive.org.
 * [VintageApple.org](https://vintageapple.org/) is a collection of early Apple and Mac documents and a couple of mirrors.
-* https://www.mothersruin.com/software/Archaeology/reverse/
+* Mothers Ruin Software develops a couple of tools for analyzing macOS software distribution formats. The results of [some of their reverse engineering efforts](https://www.mothersruin.com/software/Archaeology/reverse/) behind these tools are published on their website.
+
+	* Notably, their [Archaeology](https://www.mothersruin.com/software/Archaeology/) tool allows inspecting various data formats commonly used on Apple systems, including some formats that are undocumented and/or not well-supported by other tools.
 
 #### Inside Macintosh
 
@@ -225,8 +227,8 @@ The QTR (QuickTime RezWack) format was used to add Mac-style resources to Window
 
 ## Classic Mac OS installer tomes
 
-* https://github.com/kainjow/TomeViewerX
-* https://github.com/MacPaw/XADMaster/issues/71
+* [TomeViewerX](https://github.com/kainjow/TomeViewerX) is an open-source, MIT-licensed "incomplete parser for Mac OS Tome files". It doesn't support actually decompressing the stored files.
+* Some discussion related to reverse-engineering the tome format can be found [on the issue tracker for XADMaster (The Unarchiver)](https://github.com/MacPaw/XADMaster/issues/71).
 
 ## Disk images
 
@@ -237,7 +239,7 @@ The QTR (QuickTime RezWack) format was used to add Mac-style resources to Window
 * Wikipedia's [Apple Disk Image](https://en.wikipedia.org/wiki/Apple_Disk_Image) article has some general information, but also documents the basic data structures of UDIF disk images.
 * macdisk.com also documents [the basic data structures of UDIF disk images](https://www.macdisk.com/dmgen.php).
 * NewOSXBook.com has a page "[Demystifying the DMG File Format](https://newosxbook.com/DMG.html)", which documents the main UDIF metadata structures.
-* https://www.mothersruin.com/software/Archaeology/reverse/udif.html
+* Mothers Ruin Software has [some documentation](https://www.mothersruin.com/software/Archaeology/reverse/udif.html) about the UDIF trailer metadata structure, assembled from various sources and their own reverse-engineering work.
 
 ## HFS+ file system compression
 
@@ -253,14 +255,18 @@ The QTR (QuickTime RezWack) format was used to add Mac-style resources to Window
 
 ## Apple Archives (.aar, .aea, .yaa)
 
-* https://developer.apple.com/documentation/applearchive?language=objc
-* https://developer.apple.com/forums/thread/133985
-* https://wwws.nightwatchcybersecurity.com/2020/06/14/yaa-an-obscure-macos-compressed-file-format/
-* https://eclecticlight.co/2022/05/10/inside-apple-archive-more-than-a-compression-format/
-* https://eclecticlight.co/2020/11/24/compress-and-decompress-files-using-applearchive/
-* https://github.com/aonez/Keka/issues/829
+A proprietary archive format supporting various compression algorithms and extensible metadata.
+Officially introduced with macOS 11 via the [Apple Archive framework](https://developer.apple.com/documentation/applearchive) and the `aa` command line tool.
+It evolved from the earlier YAA format, which was already supported since macOS 10.13 via the `yaa` command line tool, but not well-documented or advertised by Apple.
+Apple's own Apple Archive tools and libraries seem to be backwards compatible with the earlier YAA format.
+The macOS Archive Utility has supported extracting YAA and Apple Archives since their respective introduction, but supports creating Apple Archives only since macOS 12.
+
+* The "[Unpacking Apple Archives](https://developer.apple.com/forums/thread/133985)" thread on the Apple Developer Forums explains the use of Apple Archives (and formerly YAA archives) inside XIP archives.
+* [A blog post by Nightwatch Cybersecurity](https://wwws.nightwatchcybersecurity.com/2020/06/14/yaa-an-obscure-macos-compressed-file-format/) from 2020 (before the official introduction as Apple Archive) discusses the possible use of YAA archives by malware.
+* Howard Oakley's blog, The Eclectic Light Company, has [multiple blog posts about Apple Archives](https://eclecticlight.co/tag/applearchive/).
+* [An issue](https://github.com/aonez/Keka/issues/829) on the issue tracker for the Keka archive manager discusses supporting Apple Archive and YAA archives.
 
 ## UIKit NIB archives (.nib files with NIBArchive signature)
 
-* https://www.mothersruin.com/software/Archaeology/reverse/uinib.html
-* https://github.com/JustHexData/nibarchive
+* Mothers Ruin Software [documents the NIB archive data format](https://www.mothersruin.com/software/Archaeology/reverse/uinib.html).
+* There is an open-source, GPLv3-licensed [NIBArchive-Parser](https://github.com/MatrixEditor/nibarchive) library/tool written in Python. (Previous URL: https://github.com/JustHexData/nibarchive)
