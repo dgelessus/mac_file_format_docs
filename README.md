@@ -253,7 +253,7 @@ The QTR (QuickTime RezWack) format was used to add Mac-style resources to Window
 * macdisk.com documents [the ADC compression algorithm](https://www.macdisk.com/dmgen.php).
 * [node-apple-data-compression](https://github.com/jhermsmeier/node-apple-data-compression) implements ADC decompression as a Node.js library.
 
-## Apple Archives (.aar, .aea, .yaa)
+## Apple Archives (.aar, .yaa)
 
 A proprietary archive format supporting various compression algorithms and extensible metadata.
 Officially introduced with macOS 11 via the [Apple Archive framework](https://developer.apple.com/documentation/applearchive) and the `aa` command line tool.
@@ -265,6 +265,14 @@ The macOS Archive Utility has supported extracting YAA and Apple Archives since 
 * [A blog post by Nightwatch Cybersecurity](https://wwws.nightwatchcybersecurity.com/2020/06/14/yaa-an-obscure-macos-compressed-file-format/) from 2020 (before the official introduction as Apple Archive) discusses the possible use of YAA archives by malware.
 * Howard Oakley's blog, The Eclectic Light Company, has [multiple blog posts about Apple Archives](https://eclecticlight.co/tag/applearchive/).
 * [An issue](https://github.com/aonez/Keka/issues/829) on the issue tracker for the Keka archive manager discusses supporting Apple Archive and YAA archives.
+* The Apple Wiki has an [Apple Archive](https://theapplewiki.com/wiki/Apple_Archive) page with some technical details about the data format.
+
+## Apple Encrypted Archives (.aea)
+
+Another proprietary format, built on top of the Apple Archive format, which adds the ability to encrypt and/or sign archives.
+
+* The Apple Wiki has an [Apple Encrypted Archive](https://theapplewiki.com/wiki/Apple_Encrypted_Archive) page with a high-level overview of the format and its uses.
+* [python-aea](https://github.com/kinnay/AEA) is an open-source, MIT-licensed tool for extracting and creating Apple Encrypted Archives, along with [detailed documentation of the data format](https://github.com/kinnay/AEA/blob/HEAD/FORMAT.md).
 
 ## UIKit NIB archives (.nib files with NIBArchive signature)
 
