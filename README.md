@@ -266,6 +266,7 @@ The macOS Archive Utility has supported extracting YAA and Apple Archives since 
 * Howard Oakley's blog, The Eclectic Light Company, has [multiple blog posts about Apple Archives](https://eclecticlight.co/tag/applearchive/).
 * [An issue](https://github.com/aonez/Keka/issues/829) on the issue tracker for the Keka archive manager discusses supporting Apple Archive and YAA archives.
 * The Apple Wiki has an [Apple Archive](https://theapplewiki.com/wiki/Apple_Archive) page with some technical details about the data format.
+* [libNeoAppleArchive](https://github.com/0xilis/libNeoAppleArchive) is an open-source, MIT-licensed "unfinished cross-compat library for parsing Apple Archive (and, by extension, YAA)".
 
 ## Apple Encrypted Archives (.aea)
 
